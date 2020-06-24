@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RouteFiveComponent } from './route-five.component';
+import { DataService } from '../services/data.service';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('RouteFiveComponent', () => {
   let component: RouteFiveComponent;
@@ -8,7 +10,9 @@ describe('RouteFiveComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RouteFiveComponent ]
+      declarations: [ RouteFiveComponent ],
+      providers: [DataService ],
+      imports: [HttpClientModule]
     })
     .compileComponents();
   }));

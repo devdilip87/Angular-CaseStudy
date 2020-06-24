@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CounterTimerComponent } from './counter-timer.component';
+import { CounterService } from 'src/app/services/counter.service';
 
 describe('CounterTimerComponent', () => {
   let component: CounterTimerComponent;
@@ -8,7 +9,8 @@ describe('CounterTimerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CounterTimerComponent ]
+      declarations: [ CounterTimerComponent ],
+      providers: [CounterService]
     })
     .compileComponents();
   }));

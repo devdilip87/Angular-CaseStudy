@@ -15,6 +15,7 @@
         </div>
     </ng-template>
     <ng-template
+        *ngIf="data && data.node"
         [ngTemplateOutlet]="templateRef"
         [ngTemplateOutletContext]="{ node: data.node }">
     </ng-template>

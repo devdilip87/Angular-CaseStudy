@@ -1,4 +1,4 @@
-import { Component, ViewChild, OnInit, OnDestroy, ComponentFactoryResolver } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, ComponentFactoryResolver } from '@angular/core';
 import { BoxPlaceHolderDirective } from './box-placeholer.directive';
 import {BoxDynamicComponent} from './box-dynamic.component';
 import { SharedService } from './shared.service';
@@ -9,13 +9,13 @@ import { SharedService } from './shared.service';
   templateUrl: './route-six.component.html',
   styleUrls: ['./route-six.component.css']
 })
-export class RouteSixComponent implements OnInit {
+export class RouteSixComponent implements AfterViewInit {
   scrollCount = 0;
   @ViewChild(BoxPlaceHolderDirective, {static: true}) boxPlaceholder: BoxPlaceHolderDirective;
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver, private sharedService: SharedService) { }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.loadComponent();
     this.sharedService.boxAlert.subscribe((index: number) => {
       alert('Div no ' + index + ' clicked!');

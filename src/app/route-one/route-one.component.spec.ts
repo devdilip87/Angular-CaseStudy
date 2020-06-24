@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RouteOneComponent } from './route-one.component';
+import { DataService } from '../services/data.service';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('RouteOneComponent', () => {
   let component: RouteOneComponent;
@@ -8,7 +10,9 @@ describe('RouteOneComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RouteOneComponent ]
+      declarations: [ RouteOneComponent ],
+      providers: [DataService],
+      imports: [HttpClientModule]
     })
     .compileComponents();
   }));

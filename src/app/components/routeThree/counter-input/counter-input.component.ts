@@ -6,7 +6,8 @@ import Utils from 'src/app/utils/utils';
 @Component({
   selector: 'app-counter-input',
   templateUrl: './counter-input.component.html',
-  styleUrls: ['./counter-input.component.css']
+  styleUrls: ['./counter-input.component.css'],
+  providers: [Utils]
 })
 export class CounterInputComponent implements OnInit {
   @Input() timerLog: TimerLog[];
