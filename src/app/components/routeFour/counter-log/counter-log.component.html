@@ -1,0 +1,6 @@
+<div class="container">
+    <h3>Countdown Log</h3>
+    <ul *ngIf="timerLog.length">
+        <li *ngFor="let log of timerLog"> {{ (log.action == 1 ? 'Started At ' : 'Paused At ') + (log.dateTime | date: 'dd-m-yyyy hh:mm:ss a')}} </li>
+    </ul>
+</div>

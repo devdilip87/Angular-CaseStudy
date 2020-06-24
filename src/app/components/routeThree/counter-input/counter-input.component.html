@@ -1,0 +1,19 @@
+<div class="box">
+    <h3>Countdown Input</h3>
+    <div>
+        <label>Enter Timer Limit </label>
+        <input type="text" name="timerLimit" [(ngModel)]="timerLimit" [disabled]="timerLog.length">
+    </div>
+    <div>
+        <button (click)="startAndPause()" [disabled]="timerLimit == ''">Start/Pause</button>
+        <button (click)="reset()" [disabled]="timerLimit == ''">Reset</button>
+    </div>
+    
+    <div class="log">
+            <!-- <log [timerLog]="timerLog" [logAction]="2" [logCounter]="true"></log> -->
+        <ul>
+            <li *ngFor="let pauseAt of utils.filterLog(timerLog, 2)">Paused at {{ pauseAt.counter }} </li>
+        </ul>
+    </div>
+</div>
+    

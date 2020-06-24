@@ -1,0 +1,10 @@
+<form class="sort" [formGroup]="form">
+    <section>
+        <button class="btn" [ngClass]="{active: gridView}" (click)="toggoleView()"><fa-icon [icon]="faThLarge"></fa-icon> Grid</button>
+        <button class="btn" [ngClass]="{active: !gridView}" (click)="toggoleView()"><fa-icon [icon]="faBars"></fa-icon> List</button>
+   
+        <select formControlName="selectedOption" (change)="onOptionChange()">
+            <option *ngFor="let option of filterOptions; let i = index" [value]="filterOptions[i].id">{{ filterOptions[i].name }}</option>
+        </select>
+    </section>
+</form>

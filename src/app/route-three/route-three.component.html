@@ -1,0 +1,13 @@
+<div class="container">
+    <app-counter-timer [timerLimit]="countDown" class="box"></app-counter-timer>
+    <app-counter-input 
+        (startedOrPaused)="onStartAndPause($event)" 
+        (timerReset)="onTimerReset()" 
+        [timerLog]="timerLog"
+        [timerLimit]="timerLimit"
+        class="box">
+    </app-counter-input>
+    <app-counter-log [timerLog]="timerLog" class="box"></app-counter-log>
+    <app-counter-tracker [timerLog]="timerLog" class="box"></app-counter-tracker>
+</div>
+            

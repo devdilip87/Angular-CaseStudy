@@ -1,0 +1,9 @@
+<div>
+    <div>
+        <app-product-filter class="displayType" (optionSelected)="onFilterChange($event)" (viewChange)="onViewChange()" [gridView]="gridView"></app-product-filter>
+    </div>
+    
+    <div class="container" [ngClass]="{list: !gridView, grid: gridView}">
+        <app-product *ngFor="let product of products" [product]="product"></app-product>
+    </div>
+</div>

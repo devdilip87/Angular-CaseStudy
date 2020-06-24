@@ -1,0 +1,12 @@
+.container {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.container ul{
+    overflow-y: scroll;
+    list-style: none;
+    padding: 5px;
+}

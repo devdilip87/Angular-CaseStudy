@@ -1,0 +1,24 @@
+.container {
+    display: grid;
+    padding-top: 20px;
+    align-items: center;
+    clear: both;
+}
+
+.grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.list {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 767px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

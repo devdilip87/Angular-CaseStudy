@@ -1,0 +1,18 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr class="header">
+            <th *ngFor="let field of tableHeader" (click)="updateSort(field)">
+                {{field.header}}
+            </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products" >
+            <td *ngFor="let field of tableHeader">
+                {{product[field.header]}}
+            </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

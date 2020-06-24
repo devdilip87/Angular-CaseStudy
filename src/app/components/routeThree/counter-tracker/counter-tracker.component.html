@@ -1,0 +1,11 @@
+<h3>Countdown Tracker</h3>
+<div class="container" *ngIf="timerLog.length">
+    <div>
+        <h3>{{ utils.filterLog(timerLog , 1).length }}</h3>
+        <p>Started</p>
+    </div>
+    <div>
+        <h3>{{ utils.filterLog(timerLog, 2).length }}</h3>
+        <p>Paused</p>
+    </div>
+</div>

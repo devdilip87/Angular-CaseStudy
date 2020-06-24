@@ -1,0 +1,12 @@
+<div class="container-d">
+    <lazy-load-scroll (scrolled)="onScroll()" >
+        <!-- <div class="card" *ngFor="let product of products; let idx = index" (click)=buttonClicked(idx)>
+            <span><a><h2>{{idx + 1}}</h2></a></span>
+            <span><a>{{product.name}}</a></span>
+            <button (click)=buttonClicked(idx)>{{product.name}}</button>
+        </div> -->
+        <div class="card-container">
+            <ng-template box-placeholder (boxClick)=buttonClicked(index)></ng-template>
+        </div>
+    </lazy-load-scroll>
+</div>

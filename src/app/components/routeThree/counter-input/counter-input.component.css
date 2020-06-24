@@ -1,0 +1,16 @@
+.log{
+    display: flex;
+    height: 120px;
+    overflow: hidden;
+}
+
+.log ul{
+    width: 100%;
+    overflow-y: scroll;
+    list-style: none;
+    padding: 5px;
+}
+
+.box button {
+    margin: 10px;
+}

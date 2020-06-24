@@ -1,0 +1,21 @@
+<div class="container">
+    <ng-template #templateRef let-node="node">
+        <div class="node">
+            <div class="marquee" *ngIf="node.label">
+                <a>{{ node.label }}</a>
+            </div>
+            <div *ngIf="node.node.length">
+                <ng-template ngFor let-child [ngForOf]="node.node">
+                    <ng-template
+                        [ngTemplateOutlet]="templateRef"
+                        [ngTemplateOutletContext]="{ node: child }">
+                    </ng-template>
+                </ng-template>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template
+        [ngTemplateOutlet]="templateRef"
+        [ngTemplateOutletContext]="{ node: data.node }">
+    </ng-template>
+</div>
