@@ -1,8 +1,8 @@
 import { Directive, ViewContainerRef } from '@angular/core';
 
 @Directive({
-  selector: '[box-placeholder]',
+  selector: '[appBoxPlaceHolder]',
 })
-export class BoxPlaceholderDirective {
+export class BoxPlaceHolderDirective {
   constructor(public viewContainerRef: ViewContainerRef) { }
 }

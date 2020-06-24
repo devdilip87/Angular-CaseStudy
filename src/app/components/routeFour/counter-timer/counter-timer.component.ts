@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CounterService } from 'src/app/services/counter.service';
 import { TimerLog } from 'src/app/models/timerLog.model';
 import { interval, Subscription } from 'rxjs';
@@ -8,7 +8,7 @@ import { interval, Subscription } from 'rxjs';
   templateUrl: './counter-timer.component.html',
   styleUrls: ['./counter-timer.component.css']
 })
-export class CounterTimerComponent implements OnInit {
+export class CounterTimerComponent implements OnInit, OnDestroy {
   private countDownDubscription: Subscription;
   countDown: number;
   timerLog: TimerLog[] = [];

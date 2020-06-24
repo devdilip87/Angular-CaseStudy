@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, Output, EventEmitter, ElementRef, ViewChild, Input, OnDestroy } from '@angular/core';
 
 @Component({
-    selector: 'lazy-load-scroll',
+    selector: 'app-lazy-load-scroll',
     template: `<ng-content></ng-content><div class="footer" #footer></div>`
 })
 export class LazyLoadScrollComponent implements AfterViewInit, OnDestroy {

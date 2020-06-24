@@ -8,7 +8,6 @@ import { CounterInputComponent } from './../components/routeThree/counter-input/
 import { CounterTimerComponent } from './../components/routeThree/counter-timer/counter-timer.component';
 import { CounterLogComponent } from './../components/routeThree/counter-log/counter-log.component';
 import { CounterTrackerComponent } from './../components/routeThree/counter-tracker/counter-tracker.component';
-import { LogComponent } from './../components/log/log.component';
 
 
 @NgModule({
@@ -17,8 +16,7 @@ import { LogComponent } from './../components/log/log.component';
     CounterInputComponent,
     CounterTimerComponent,
     CounterLogComponent,
-    CounterTrackerComponent,
-    LogComponent
+    CounterTrackerComponent
   ],
   imports: [
     CommonModule,

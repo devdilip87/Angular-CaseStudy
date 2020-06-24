@@ -13,7 +13,7 @@ export class RouteOneComponent implements OnInit {
     private dataService: DataService
   ) { }
 
-  ngOnInit(){
+  ngOnInit(): void{
     this.dataService.getJSON('nestedData').subscribe(data => {
       this.data = data;
     });

@@ -1,5 +1,5 @@
 import { Component, ViewChild, OnInit, OnDestroy, ComponentFactoryResolver } from '@angular/core';
-import { BoxPlaceholderDirective } from './box-placeholer.directive';
+import { BoxPlaceHolderDirective } from './box-placeholer.directive';
 import {BoxDynamicComponent} from './box-dynamic.component';
 import { SharedService } from './shared.service';
 
@@ -11,13 +11,13 @@ import { SharedService } from './shared.service';
 })
 export class RouteSixComponent implements OnInit {
   scrollCount = 0;
-  @ViewChild(BoxPlaceholderDirective, {static: true}) boxPlaceholder: BoxPlaceholderDirective;
+  @ViewChild(BoxPlaceHolderDirective, {static: true}) boxPlaceholder: BoxPlaceHolderDirective;
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver, private sharedService: SharedService) { }
 
   ngOnInit(): void {
     this.loadComponent();
-    this.sharedService.boxAlert.subscribe((index) => {
+    this.sharedService.boxAlert.subscribe((index: number) => {
       alert('Div no ' + index + ' clicked!');
     });
   }

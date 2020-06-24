@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CounterService } from 'src/app/services/counter.service';
 import { TimerLog } from 'src/app/models/timerLog.model';
-import { utils } from 'protractor';
 import Utils from 'src/app/utils/utils';
 
 @Component({

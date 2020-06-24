@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import { faBars, faThLarge } from '@fortawesome/free-solid-svg-icons';
 import { of } from 'rxjs';
@@ -8,7 +8,7 @@ import { of } from 'rxjs';
   templateUrl: './product-filter.component.html',
   styleUrls: ['./product-filter.component.css']
 })
-export class ProductFilterComponent implements OnInit {
+export class ProductFilterComponent {
   /*---- Icons ----*/
   faBars = faBars;
   faThLarge = faThLarge;
@@ -31,8 +31,8 @@ export class ProductFilterComponent implements OnInit {
   }
 
   get selectedOption() {
-		return this.form.get('selectedOption');
-	}
+    return this.form.get('selectedOption');
+  }
 
   getfilterOptions() {
     return [
@@ -41,19 +41,12 @@ export class ProductFilterComponent implements OnInit {
     ];
   }
 
-
-
   onOptionChange() {
     this.optionSelected.emit(+this.selectedOption.value);
-	}
-
-  ngOnInit(): void {
   }
 
   toggoleView = () => {
     this.gridView = !this.gridView;
     this.viewChange.emit();
   }
-
-
 }

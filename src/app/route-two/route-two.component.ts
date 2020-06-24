@@ -9,7 +9,7 @@ import Utils from '../utils/utils';
   templateUrl: './route-two.component.html',
   styleUrls: ['./route-two.component.css']
 })
-export class RouteTwoComponent {
+export class RouteTwoComponent implements OnInit {
   gridView = true;
   products: Product[];
 
@@ -17,7 +17,7 @@ export class RouteTwoComponent {
     private dataService: DataService
   ) { }
 
-  ngOnInit(){
+  ngOnInit(): void {
     this.dataService.getJSON('products').subscribe((data) => {
       this.products = Utils.sort(data, 'price' , 0);
     });

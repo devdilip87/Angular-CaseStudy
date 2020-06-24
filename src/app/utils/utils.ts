@@ -6,11 +6,11 @@ export default class Utils {
     static sort(list: {}[], field: string, sortOder: number) {
         let tempList = [];
         if (sortOder > 0) {
-            tempList = list.sort(function(a, b) {
+            tempList = list.sort((a, b) => {
                 return typeof(a[field]) === 'string' ? b[field].localeCompare(a[field]) : (b[field] - a[field]);
             });
         } else {
-            tempList = list.sort(function(a, b) {
+            tempList = list.sort((a, b) => {
               return typeof(a[field]) === 'string' ? a[field].localeCompare(b[field]) : (a[field] - b[field]);
             });
         }
