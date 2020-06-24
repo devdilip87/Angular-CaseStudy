@@ -15,7 +15,7 @@ import Utils from 'src/app/utils/utils';
 })
 export class LogComponent {
     @Input() timerLog: TimerLog[];
-    @Input() logAction: number = 0;
+    @Input() logAction = 0;
     @Input() logCounter: boolean;
     constructor(public utils: Utils) { }
 }

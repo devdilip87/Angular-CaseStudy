@@ -8,7 +8,7 @@ import Utils from 'src/app/utils/utils';
   styleUrls: ['./counter-tracker.component.css']
 })
 export class CounterTrackerComponent implements OnInit {
-  timerLog:{action: number, counter: number, dateTime: string}[];
+  timerLog: {action: number, counter: number, dateTime: string}[];
   constructor(private counterService: CounterService, public utils: Utils) { }
 
   ngOnInit(): void {

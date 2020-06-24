@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { RouteFiveRoutingModule } from './route-five-routing.module';
 import { RouteFiveComponent } from './route-five.component';
-import { DataService } from "./../services/data.service";
+import { DataService } from './../services/data.service';
 
 
 @NgModule({

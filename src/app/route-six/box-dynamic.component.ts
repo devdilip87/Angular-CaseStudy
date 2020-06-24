@@ -6,8 +6,8 @@ import { SharedService } from './shared.service';
   template: '<div class="card" (click)=buttonClicked(index)><h2>{{ index }} </h2></div>'
 })
 export class BoxDynamicComponent implements OnInit {
-  index: number = 0;
-  constructor(private sharedService: SharedService) { } 
+  index = 0;
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
   }

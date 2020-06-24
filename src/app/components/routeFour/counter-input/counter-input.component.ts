@@ -10,9 +10,9 @@ import Utils from 'src/app/utils/utils';
 })
 export class CounterInputComponent implements OnInit {
   timerLog: TimerLog[];
-  timerLimit: string = '';
+  timerLimit = '';
 
-  isStarted: boolean = false;
+  isStarted = false;
 
   constructor(private counterService: CounterService, public utils: Utils) { }
 

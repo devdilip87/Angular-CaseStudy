@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from "./../services/data.service";
+import { DataService } from './../services/data.service';
 import Utils from '../utils/utils';
 
 @Component({
@@ -13,15 +13,15 @@ export class RouteFiveComponent implements OnInit {
   products = [];
 
   constructor(
-    private dataService : DataService
+    private dataService: DataService
   ) { }
 
   ngOnInit(){
-    this.dataService.getJSON("students").subscribe(data => {
+    this.dataService.getJSON('students').subscribe(data => {
           console.log(data);
           this.originalList = data.students;
           this.products = [...this.originalList];
-          this.tableHeader = Object.keys(this.products[0]).map((element)=>{
+          this.tableHeader = Object.keys(this.products[0]).map((element) => {
             return {
               header: element,
               clickCount: 0
@@ -31,8 +31,8 @@ export class RouteFiveComponent implements OnInit {
   }
 
   updateSort(field) {
-    
-    if(2 - field.clickCount){
+
+    if (2 - field.clickCount){
       this.products = Utils.sort(this.products, field.header, field.clickCount);
       field.clickCount++;
     }

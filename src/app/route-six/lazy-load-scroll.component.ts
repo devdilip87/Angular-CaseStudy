@@ -19,7 +19,7 @@ export class LazyLoadScrollComponent implements AfterViewInit, OnDestroy {
         };
 
         this.observer = new IntersectionObserver(([entry]) => {
-        if(entry.isIntersecting) {
+        if (entry.isIntersecting) {
             this.scrolled.emit();
         }
         }, options);

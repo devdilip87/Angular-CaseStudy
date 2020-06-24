@@ -28,9 +28,9 @@ export class CounterTimerComponent implements OnInit {
   }
 
   onStartAndPause(data: {isStarted: boolean, limit: string}) {
-    if(data.isStarted){
-      this.countDown = this.countDown > 0 ? this.countDown: +data.limit;
-      
+    if (data.isStarted){
+      this.countDown = this.countDown > 0 ? this.countDown : +data.limit;
+
       this.timerLog.push({action: 1, counter: this.countDown, dateTime: new Date().toString()});
       this.counterService.updateLog(this.timerLog);
       this.updateCountDown();
@@ -39,20 +39,20 @@ export class CounterTimerComponent implements OnInit {
       this.countDownUnsubscribe();
       this.timerLog.push({action: 2, counter: this.countDown, dateTime: new Date().toString()});
       this.counterService.updateLog(this.timerLog);
-      
+
     }
   }
   updateCountDown() {
     this.countDownDubscription = interval(1000).subscribe(() => {
       this.countDown--;
-      if(this.countDown === 0) {
+      if (this.countDown === 0) {
         this.countDownUnsubscribe();
       }
     });
   }
 
   onTimerReset() {
-    if(this.countDownDubscription) {
+    if (this.countDownDubscription) {
       this.countDownUnsubscribe();
     }
     this.timerLog = [];

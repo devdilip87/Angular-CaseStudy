@@ -41,7 +41,7 @@ export class ProductFilterComponent implements OnInit {
     ];
   }
 
-  
+
 
   onOptionChange() {
     this.optionSelected.emit(+this.selectedOption.value);
@@ -50,7 +50,7 @@ export class ProductFilterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toggoleView = () =>{
+  toggoleView = () => {
     this.gridView = !this.gridView;
     this.viewChange.emit();
   }

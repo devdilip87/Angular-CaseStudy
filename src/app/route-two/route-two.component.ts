@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { DataService } from "./../services/data.service";
+import { DataService } from './../services/data.service';
 import { Product } from '../models/product.model';
 import Utils from '../utils/utils';
 
@@ -10,15 +10,15 @@ import Utils from '../utils/utils';
   styleUrls: ['./route-two.component.css']
 })
 export class RouteTwoComponent {
-  gridView: boolean = true;
+  gridView = true;
   products: Product[];
 
   constructor(
-    private dataService : DataService
+    private dataService: DataService
   ) { }
 
   ngOnInit(){
-    this.dataService.getJSON("products").subscribe((data) => {
+    this.dataService.getJSON('products').subscribe((data) => {
       this.products = Utils.sort(data, 'price' , 0);
     });
   }

@@ -14,7 +14,7 @@ export class CounterInputComponent implements OnInit {
   @Output() startedOrPaused = new EventEmitter();
   @Output() timerReset = new EventEmitter();
 
-  isStarted: boolean = false;
+  isStarted = false;
   form: FormGroup;
 
   constructor(public utils: Utils) {

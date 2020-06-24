@@ -7,14 +7,14 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./route-one.component.css']
 })
 export class RouteOneComponent implements OnInit {
-  data:{node: {}};
+  data: {node: {}};
 
   constructor(
-    private dataService : DataService
+    private dataService: DataService
   ) { }
 
   ngOnInit(){
-    this.dataService.getJSON("nestedData").subscribe(data => {
+    this.dataService.getJSON('nestedData').subscribe(data => {
       this.data = data;
     });
   }

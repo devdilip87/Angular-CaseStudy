@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CounterService } from "./../services/counter.service";
+import { CounterService } from './../services/counter.service';
 import Utils from '../utils/utils';
 
 @Component({
