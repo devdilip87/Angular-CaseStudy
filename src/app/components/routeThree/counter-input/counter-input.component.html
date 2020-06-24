@@ -2,7 +2,7 @@
     <h3>Countdown Input</h3>
     <div>
         <label>Enter Timer Limit </label>
-        <input type="text" name="timerLimit" [(ngModel)]="timerLimit" [disabled]="timerLog && timerLog.length">
+        <input type="number" min="1" name="timerLimit" [(ngModel)]="timerLimit" [disabled]="timerLog && timerLog.length">
     </div>
     <div>
         <button (click)="startAndPause()" [disabled]="timerLimit == ''">Start/Pause</button>

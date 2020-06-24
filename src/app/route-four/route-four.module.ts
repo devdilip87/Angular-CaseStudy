@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouteFourRoutingModule } from './route-four-routing.module';
 import { CounterService } from './../services/counter.service';
 import { RouteFourComponent } from './route-four.component';
@@ -20,6 +20,7 @@ import { CounterTrackerComponent } from './../components/routeFour/counter-track
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     RouteFourRoutingModule
   ],
   providers: []

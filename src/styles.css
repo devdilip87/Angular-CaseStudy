@@ -27,6 +27,10 @@
     margin-left: 20px;
   }
 
+  span {
+    display: block;
+  }
+
   .navbar {
     position: absolute;
     top: 0;

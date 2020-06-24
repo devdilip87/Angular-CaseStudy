@@ -1,15 +1,16 @@
 <div class="box">
-    <div>
-        <h3>Countdown Input</h3>
-    </div>
-    <div>
-        <label>Enter Timer Limit </label>
-        <input type="text" name="timerLimit" [(ngModel)]="timerLimit" [disabled]="timerLog.length">
-    </div>
-    <div>      
-        <button (click)="startAndPause()" [disabled]="timerLimit == ''">Start/Pause</button>
-        <button (click)="reset()" [disabled]="timerLimit == ''">Reset</button>
-    </div>
+    <h3>Countdown Input</h3>
+    <form [formGroup]="timerForm">
+        <div>
+            <label for="timerLimit">Enter Timer Limit </label>
+            <input type="text" formControlName="timerLimit" id="timerLimit" [attr.disabled]="timerLog.length ? true: null">
+            <span *ngIf="timerForm.get('timerLimit').touched && !timerForm.get('timerLimit').valid"> Number only and greater than 0.</span>
+        </div>
+        <div>      
+            <button (click)="startAndPause()" [disabled]="!timerForm.get('timerLimit').valid">Start/Pause</button>
+            <button (click)="reset()" [disabled]="!timerForm.get('timerLimit').valid">Reset</button>
+        </div>
+    </form>
     
     <div class="log">
         <ul>
